@@ -1,0 +1,126 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(233, 235, 245);}
+    
+main {
+    max-width: 680px;
+    padding: 20px;
+    margin: 0 auto 64px;
+    font-family: "Roboto", sans-serif;
+}
+
+header {
+    border-bottom: 2px solid purple;
+}
+
+img {
+   width: 200px;
+}
+
+h1 {
+    font-family: "Sixtyfour", sans-serif;
+    color: pink;
+    text-shadow: 2px 3px 2px rebeccapurple;
+    margin-bottom: 10px;
+}
+
+#quiz {
+    counter-reset: quiz-item;
+}
+
+.quiz-itens {
+    margin-top: 24px;
+    border: solid 1px rgb(34, 0, 34);
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.quiz-itens h3 {
+    font-size: 16px;
+    padding: 16px 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background-color: rgba(247, 189, 239, 0.651);
+}
+
+.quiz-itens h3::before {
+    counter-increment: quiz-item;
+    content: counter(quiz-item);
+    background-color: #a999f1;
+    border-radius: 50%;
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    flex-shrink: 0;
+}
+
+.quiz-itens dl {
+    padding: 20px 24px;
+    display: grid;
+    gap: 8px;
+}
+
+.quiz-itens dl dt {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+}
+
+input {
+    all: unset;
+    border: 1px solid rgb(0, 0, 0);
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+input:checked {
+    border: 2px solid purple;
+}
+
+input:checked:before {
+    content: "";
+    width: 13px;
+    height: 13px;
+    background-color: #a999f1;
+    border-radius: 50px;
+}
+
+#texto {
+text-align: center;
+margin-top: 24px;
+font-style: italic;
+text-decoration: none;
+}
+
+a {
+    text-decoration: none;
+    font-weight: 800;
+    color: rgb(240, 6, 143);
+}
+
+ #button {
+    font-size: 24px;
+    text-align: center;
+    background-color: #a999f1;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding: 12px;
+    font-family: "Sixtyfour", sans-serif;
+}
+
